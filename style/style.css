@@ -1,0 +1,204 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;700&display=swap'); */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Raleway-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('../fonts/Raleway-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+body {
+    font: 400 19px/1 'Raleway', Arial, tahoma, verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input {
+    outline: none;
+}
+.wrapper {
+    overflow: hidden;
+}
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container_header {
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0;
+}
+.container__inner {
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 0 15px;
+    max-height: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 14px 0;
+}
+
+.navigation {
+   
+}
+.navigation__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__item a {
+    color: #00c0ff;
+    text-transform: uppercase;
+    display: block;
+    padding: 18px;
+    font-size: 19px;
+}
+
+.main-banner {
+    background: url(../images/banner.jpg) no-repeat;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-position: center;
+}
+
+.main-inner {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sport {
+    margin: 0 auto;
+    margin-top: 380px;
+    margin-bottom: 60px;
+}
+.button-wrapper {
+    text-align: center;
+    margin-bottom: 160px;
+}
+.btn {
+    background-color: #d4d4d4;
+    padding: 10px 75px;
+    border-radius: 22px;
+    color: #3ea2d8;
+    font: bold 25px/1 'Roboto';
+}
+.text {
+    margin-bottom: 100px;
+    max-width: 830px;
+}
+.text p {
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .sport {
+        margin-top: 240px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .text p {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .text {
+        margin-bottom: 70px;
+    }
+    .navigation {
+        display: none;
+    }
+    .btn {
+        font-size: 16px;
+
+}
+    
