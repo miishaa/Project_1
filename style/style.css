@@ -95,14 +95,12 @@ input {
     overflow: hidden;
 }
 .header {
-    max-width: 1440px;
     margin: 0 auto;
     position: relative;
 }
 
 .container_header {
     background-color: black;
-    max-width: 1440px;
     margin: 0 auto;
     position: absolute;
     width: 100%;
@@ -122,9 +120,6 @@ input {
     padding: 14px 0;
 }
 
-.navigation {
-   
-}
 .navigation__list {
     display: flex;
     justify-content: space-between;
@@ -139,10 +134,8 @@ input {
 }
 
 .main-banner {
-    background: url(../images/banner.jpg) no-repeat;
-    min-height: 100vh;
-    max-width: 1440px;
-    margin: 0 auto;
+    background: url(../images/banner.jpg) no-repeat 100% 0;
+    min-height: 968px;
     background-position: center;
 }
 
@@ -154,8 +147,8 @@ input {
 }
 .sport {
     margin: 0 auto;
-    margin-top: 380px;
-    margin-bottom: 60px;
+    margin-top: 391px;
+    margin-bottom: 41px;
 }
 .button-wrapper {
     text-align: center;
@@ -163,14 +156,15 @@ input {
 }
 .btn {
     background-color: #d4d4d4;
-    padding: 10px 75px;
-    border-radius: 22px;
+    padding: 13px 60px;
+    border-radius: 24px;
     color: #3ea2d8;
     font: bold 25px/1 'Roboto';
 }
 .text {
-    margin-bottom: 100px;
-    max-width: 830px;
+    margin-bottom: 119px;
+    max-width: 808px;
+    padding: 0 15px;
 }
 .text p {
     text-align: center;
@@ -178,7 +172,150 @@ input {
     font-size: 21px;
     line-height: 1.2;
 }
+.mobile-button {
+    display: inline-flex;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.mobile-button span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #3ea2d8;
+    z-index: 5;
+    transition: .3s;
+    opacity: 1;
+}
+.mobile-button::before,
+.mobile-button::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: #3ea2d8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+.mobile-button::after {
+    top: auto;
+    bottom: 0;
+}
+.mobile-button.opened span {
+    opacity: 0;
+}
+.mobile-button.opened::before {
+    transform: rotate(45deg);
+    top: calc(50% - 2px);
+}
+
+.mobile-button.opened::after {
+    transform: rotate(-45deg);
+    bottom: calc(50% - 2px);
+}
+.section-2-container {
+    max-width: 1108px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.section-2 {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.section-2-inner {
+    height: 520px;
+    background-color: black;
+    text-align: center;
+}
+.section-2-inner .first-block{
+    max-width: 922px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section-2-inner p {
+    color: #3ea2d8;
+    line-height: 1.78;
+    font-size: 18.8px;
+}
+.title-29 {
+    font-size: 29.2px;
+    font-weight: 800;
+    color: #3ea2d8;
+    padding: 165px 0 37px;
+    text-transform: uppercase;
+}
+
+.section-2-row {
+    background-color: #1b1b1b;
+    color: #fff;
+    height: 375px;
+}
+.section-2-row-item {
+    width: 288px;
+}
+.title-18 {
+    text-transform: uppercase;
+    padding: 134px 0 30px;
+    font-size: 18.5px;
+    font-weight: bold;
+}
+.section-2-row-item p {
+    font-size: 16.5px;
+    line-height: 1.52;
+}
+
+@media (max-width:800px) {
+
+    .navigation__list {
+        display: block;
+    }
+
+    .mobile-button {
+        display: inline-flex;
+    }
+    .navigation {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        padding: 20px 15px;
+        text-align: center;
+        background: #000;
+        height: auto;
+        z-index: 20;
+    }
+    
+    .header {
+        top: 0;
+    }
+    .container__inner {
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section-2-row {
+        height: 880px;
+    }
+    .section-2-container {
+        max-width: 1108px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
 @media (max-width: 768px) {
     .sport {
         margin-top: 240px;
@@ -194,11 +331,12 @@ input {
     .text {
         margin-bottom: 70px;
     }
-    .navigation {
-        display: none;
-    }
+    
     .btn {
         font-size: 16px;
+    }
+    .section-2-inner p {
+        font-size: 16px;
+    }
 
 }
-    
